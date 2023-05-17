@@ -4,14 +4,30 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <title>Barberia Alura</title>
+        <title>Encriptador de texto</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     </head>
-
     <body>
+        <main>
+            <img class="logo" src="imagenes/Alura_Logo.png" alt="Logo de Alura">
+            <textarea  rows="12" id="encriptador" 
+            placeholder="Ingrese el texto aqui"></textarea> 
+             
+            <div class="desencritador">
+                <center><textarea class="mensajeDesencriptado" rows="22"></textarea></center>
+                <img src="imagenes/mensajeNoEncontrado.png" alt="Mensaje no encontrado" class="imagenDesencriptado">
+                <center><button class="copiar">prueba</button></center>
+            </div>
 
+            <!--
+                <textarea  id="desencriptador" rows="20"></textarea>
+            -->
         
+        </main>
 
     </body>
 </html>

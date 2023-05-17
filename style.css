@@ -1,0 +1,82 @@
+body{
+    background: #F3F5FC;
+}
+
+.logo{
+    margin: 40px 50% 40px 40px;
+    width: 100px;
+    display: inline;
+}
+
+
+#encriptador{
+   vertical-align: top;
+   display: inline;
+   margin: 0 40px 0 15%;
+   font-family: 'Montserrat', sans-serif; 
+   width: 55%;
+   background: #F3F5FC;
+   font-size: 24px;
+   color: darkblue;
+   resize: none;
+   outline: none;
+   
+}
+
+#encriptador::placeholder{
+    font-size: 24px;
+    color: darkblue;
+}
+
+.advertencia{
+    vertical-align: top;
+    margin: -10000px  0 0 15%;
+    display: inline;
+
+}
+
+.desencritador{
+    margin: -80px 0px 0px 0px;
+    border-radius: 30px;
+    width: 20%;
+    display: inline-block;
+    background: white;
+    height: 530px;
+    
+}
+
+.mensajeDesencriptado{
+    margin: 5%;
+    vertical-align: top;
+    width: 80%;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 16px;
+    outline:none;
+    resize: none;
+    display: none;
+}
+
+.imagenDesencriptado{
+    margin-top: 20%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.copiar{
+    margin: 10%;
+    vertical-align: bottom ;
+    display: none;
+}
+
+
+/*
+#desencriptador{
+    display: inline;
+    width: 20%;
+    height: 530px;
+    resize: none;
+    margin: -80px 0px 0px 0px;
+    font-family: 'Montserrat', sans-serif; 
+    border-radius: 15px;
+}
+*/
