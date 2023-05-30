@@ -65,6 +65,11 @@ body{
 .copiar{
     margin: 10%;
     vertical-align: bottom ;
+    background: lightgray;
+    color: darkblue;
+    border-radius: 10px;
+    width: 130px;
+    height: 30px;
     display: none;
 }
 

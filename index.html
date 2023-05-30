@@ -18,18 +18,92 @@
             placeholder="Ingrese el texto aqui"></textarea> 
              
             <div class="desencritador">
-                <center><textarea class="mensajeDesencriptado" rows="22"></textarea></center>
-                <img src="imagenes/mensajeNoEncontrado.png" alt="Mensaje no encontrado" class="imagenDesencriptado">
-                <center><button class="copiar">prueba</button></center>
+                <center><textarea id="mensajeDesencriptado" readonly="readonly" class="mensajeDesencriptado" rows="22"></textarea></center>
+                <img src="imagenes/mensajeNoEncontrado.png" id="imagenAdvertencia" class="imagenAdvertencia" alt="Mensaje no encontrado" class="imagenDesencriptado">
+                <center><button id="copiar" onclick="copiar()" class="copiar">Copiar</button></center>
             </div>
 
             <div class="botones">
                 <p class="mensajeAdvertencia">⚠ solo letras minusculas y sin acentos</p>
-                <button class="btnEncriptar">Encriptar</button>
-                <button class="btnDesencriptar">Desencriptar</button>
+                <button class="btnEncriptar" onclick="Encriptar()">Encriptar</button>
+                <button class="btnDesencriptar" onclick="Desencriptar()">Desencriptar</button>
             </div>
         
         </main>
-
     </body>
+
+    <script>
+
+        const textareaEncriptar =document.getElementById("encriptador");
+        const textareaDesencriptador = document.getElementById("mensajeDesencriptado");
+        const btnCopiar = document.getElementById("copiar");
+        const imagenAdvertencia = document.getElementById("imagenAdvertencia");
+
+        function Encriptar(){
+            const textoInicial= textareaEncriptar.value;
+            var textoEncriptado=textoInicial;
+
+            if(textoInicial==""){
+                imagenAdvertencia.style.display="inline";
+                textareaDesencriptador.style.display="none";
+                btnCopiar.style.display="none";
+                textareaDesencriptador.value="";
+                textareaEncriptar.value="";
+            }else{
+                console.log(textoEncriptado.length)
+                textoEncriptado= textoEncriptado.replaceAll("e","enter");
+                textoEncriptado=textoEncriptado.replaceAll("i","imes");
+                textoEncriptado=textoEncriptado.replaceAll("a","ai");    
+                textoEncriptado=textoEncriptado.replaceAll("o","ober");
+                textoEncriptado=textoEncriptado.replaceAll("u","ufat");
+
+                
+                
+
+                imagenAdvertencia.style.display="none";
+                textareaDesencriptador.style.display="inline";
+                btnCopiar.style.display="inline";
+                textareaDesencriptador.value=textoEncriptado;
+                textareaEncriptar.value="";
+            }
+           
+        }   
+
+        function Desencriptar(){
+            const textoInicial= textareaEncriptar.value;
+
+            if(textoInicial==""){
+                imagenAdvertencia.style.display="inline";
+                textareaDesencriptador.style.display="none";
+                btnCopiar.style.display="none";
+                textareaDesencriptador.value="";
+                textareaEncriptar.value="";
+            }else{
+
+                var textoEncriptado= textoInicial.replaceAll("enter","e");
+                textoEncriptado=textoEncriptado.replaceAll("imes","i");
+                textoEncriptado=textoEncriptado.replaceAll("ai","a");    
+                textoEncriptado=textoEncriptado.replaceAll("ober","o");
+                textoEncriptado=textoEncriptado.replaceAll("ufat","u");
+
+
+                imagenAdvertencia.style.display="none";
+                textareaDesencriptador.style.display="inline";
+                btnCopiar.style.display="inline";
+                textareaDesencriptador.value=textoEncriptado;
+                textareaEncriptar.value="";
+
+            }
+
+        }
+
+        function copiar(){
+            var textCopiado=textareaDesencriptador.value;
+            navigator.clipboard.writeText(textCopiado);
+            alert("El texto se ha copiado en el portapapeles con extio")
+        }
+
+    </script>
+
+
 </html>
