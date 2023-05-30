@@ -68,15 +68,30 @@ body{
     display: none;
 }
 
-
-/*
-#desencriptador{
-    display: inline;
-    width: 20%;
-    height: 530px;
-    resize: none;
-    margin: -80px 0px 0px 0px;
-    font-family: 'Montserrat', sans-serif; 
-    border-radius: 15px;
+.botones{
+    position: relative;
+    margin: -50px 0 0 15%;  
 }
-*/
+
+.mensajeAdvertencia{
+    font-size: 12px;
+}
+
+.btnEncriptar{
+    background: darkblue;
+    color: lightgray;
+}
+
+.btnDesencriptar{
+    background: lightgrey;
+    color: darkblue;
+}
+
+.btnEncriptar , .btnDesencriptar{
+    margin: 10px;
+    border-radius: 10px;
+    width: 260px;
+    height: 60px;
+}
+
+
